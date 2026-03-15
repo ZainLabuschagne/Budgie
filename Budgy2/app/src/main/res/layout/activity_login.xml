@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="30dp"
+    android:background="@color/dark_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Logo Image - Place your logo as login_logo.png in res/drawable -->
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@drawable/login_logo"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:text="Budgie"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:textColor="@color/yellow_accent"
+        android:layout_marginBottom="60dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:text="Login"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"/>
+
+    <Button
+        android:text="Register"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/button_gray"
+        android:textColor="@color/text_secondary"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"/>
+
+    <Button
+        android:id="@+id/btnGuest"
+        android:text="Continue as Guest"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/yellow_accent"
+        android:textColor="@color/black"
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"/>
+
+</LinearLayout>

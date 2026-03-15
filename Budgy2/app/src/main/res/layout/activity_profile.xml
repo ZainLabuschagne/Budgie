@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/dark_gray"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Header with Hamburger Menu -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@color/medium_gray">
+
+        <TextView
+            android:text="Profile"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/yellow_accent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+        <!-- Hamburger Menu Button -->
+        <ImageButton
+            android:id="@+id/menuButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@android:drawable/ic_menu_sort_by_size"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/yellow_accent"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+
+    <!-- Dropdown Menu (Initially Hidden) -->
+    <LinearLayout
+        android:id="@+id/dropdownMenu"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:padding="16dp"
+        android:background="@color/light_gray"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Settings"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/yellow_accent"
+            android:layout_marginBottom="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Currency: ZAR"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:paddingVertical="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View android:background="@color/text_secondary" android:layout_width="match_parent" android:layout_height="1dp"/>
+
+        <TextView
+            android:text="Country: South Africa"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:paddingVertical="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View android:background="@color/text_secondary" android:layout_width="match_parent" android:layout_height="1dp"/>
+
+        <TextView
+            android:text="Language: English"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:paddingVertical="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <View android:background="@color/text_secondary" android:layout_width="match_parent" android:layout_height="1dp"/>
+
+        <TextView
+            android:text="Personal Information"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:paddingVertical="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- Profile Picture and Name -->
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Circular Profile Image -->
+        <LinearLayout
+            android:gravity="center"
+            android:background="@drawable/circular_profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp">
+
+            <TextView
+                android:text="JD"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="@color/yellow_accent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <TextView
+            android:text="John Doe"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="john.doe@email.com"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- Rewards Section (Replaces Settings) -->
+    <TextView
+        android:text="Rewards"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/yellow_accent"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="16dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:text="✨"
+            android:textSize="60sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="No rewards yet"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:text="Check back soon for special offers!"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- Navigation Bar -->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:gravity="center_vertical|center_horizontal"
+        android:padding="16dp"
+        android:background="@color/medium_gray"
+        android:elevation="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <ImageButton
+            android:id="@+id/navHome"
+            android:src="@android:drawable/ic_menu_view"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/text_secondary"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"/>
+
+        <ImageButton
+            android:id="@+id/navHistory"
+            android:src="@android:drawable/ic_menu_recent_history"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/text_secondary"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"/>
+
+        <ImageButton
+            android:id="@+id/navReports"
+            android:src="@android:drawable/ic_menu_sort_by_size"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/text_secondary"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"/>
+
+        <ImageButton
+            android:id="@+id/navProfile"
+            android:src="@android:drawable/ic_menu_myplaces"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:tint="@color/yellow_accent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"/>
+    </LinearLayout>
+
+</LinearLayout>
